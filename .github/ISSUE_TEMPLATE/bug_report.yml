@@ -1,0 +1,71 @@
+name: 🐞 问题报告
+description: 插件没有按预期工作、报错、界面异常等
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填全下面信息，方便快速定位问题。
+  - type: input
+    id: dsh-version
+    attributes:
+      label: DeepSeek Harness 版本
+      description: 设置 › 关于 里可以看到；不确定就写“最新桌面版/网页版”
+      placeholder: 例如 0.2.0-rc.2（桌面版）
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: 插件版本
+      description: 插件目录 package.json 的 version，或 Release 版本号
+      placeholder: 例如 v1.9.1
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从“打开哪个会话”开始，到问题出现为止，一步步写
+      placeholder: |
+        1. 打开某会话
+        2. 选中一段文字
+        3. 点击「在侧边提问」
+        4. 输入问题并回车
+        5. ……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+      placeholder: 例如：侧边对话里应该看到我的问题和回答
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 有没有弹提示？侧边栏是空白还是有内容？输入框清空了吗？
+      placeholder: 例如：点击后侧边栏空白；按回车后输入框清空，但侧边对话里什么都没有
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 截图 / 控制台报错 / 其他补充
+      description: 截图可以直接拖进来。控制台报错：F12 打开开发者工具 › Console，复制红色报错
+    validations:
+      required: false
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 使用环境
+      options:
+        - Windows 桌面版
+        - macOS 桌面版
+        - 浏览器访问（dsh web）
+        - 其他
+    validations:
+      required: true

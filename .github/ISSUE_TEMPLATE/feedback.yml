@@ -1,0 +1,46 @@
+name: 💡 使用意见 / 功能建议
+description: 想让它变成什么样、哪里不好用、希望增加什么功能
+title: "[Feedback] "
+labels: [feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这个插件会持续根据使用反馈修改，欢迎随便提意见——哪怕只是“用起来哪里别扭”也有帮助。
+  - type: textarea
+    id: scene
+    attributes:
+      label: 你的使用场景
+      description: 平时用它做什么？在什么情况下用？
+      placeholder: 例如：我经常让 AI 读论文，想选中一段结论让它解释，同时不想打断主对话
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 意见 / 建议
+      description: 觉得哪里可以更好、希望增加什么
+      placeholder: |
+        例如：
+        - 希望选中后按快捷键就能直接加入对话，不用先弹工具条
+        - 希望侧边对话的模型固定用某个，不跟随主会话
+        - 希望回答完可以一键写回主对话
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 你目前是怎么绕过的 / 其他参考
+      description: 现在怎么凑合做的？或者在别的产品里见过类似设计
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 对你的重要程度
+      options:
+        - 只是顺手提一句
+        - 用起来确实别扭，希望改
+        - 很需要这个功能
+    validations:
+      required: true

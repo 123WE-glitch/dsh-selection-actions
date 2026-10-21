@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 安装与使用说明
+    url: https://github.com/123WE-glitch/dsh-selection-actions#readme
+    about: 先看看 README 里的安装步骤和已知限制
+  - name: 🗣 使用交流（Discussions）
+    url: https://github.com/123WE-glitch/dsh-selection-actions/discussions
+    about: 不确定是 bug 还是功能建议？来 Discussions 聊聊

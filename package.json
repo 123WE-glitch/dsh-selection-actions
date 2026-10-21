@@ -1,0 +1,52 @@
+{
+  "name": "@local/dsh-selection-actions",
+  "version": "1.9.1",
+  "type": "module",
+  "description": "DeepSeek Harness selection actions: quote a selection into the composer or ask about it in a reusable side chat that inherits the main conversation.",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "123WE-glitch",
+  "homepage": "https://github.com/123WE-glitch/dsh-selection-actions#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/123WE-glitch/dsh-selection-actions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/123WE-glitch/dsh-selection-actions/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "selection",
+    "side-chat",
+    "quote"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "check": "node --check client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
